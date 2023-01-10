@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header .left img.profile-image {
+  width: 50px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+main#chat {
+  background: url(../../../images/chat-bg-pattern.webp) center/cover;
+  flex: 1;
+  padding: 10px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+main#chat .container {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+main#chat .message {
+  padding: 1rem;
+  color: white;
+  border-radius: 12px;
+  position: relative;
+  max-width: 400px;
+}
+main#chat .message .time {
+  font-size: 0.5em;
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+main#chat .message.to-me {
+  border-bottom-left-radius: 0;
+}
+main#chat .message.from-me {
+  align-self: end;
+  border-bottom-right-radius: 0;
+}
+
+footer ::-moz-placeholder {
+  color: white !important;
+}
+
+footer :-ms-input-placeholder {
+  color: white !important;
+}
+
+footer ::placeholder {
+  color: white !important;
+}/*# sourceMappingURL=chat.css.map */

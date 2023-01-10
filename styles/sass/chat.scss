@@ -1,0 +1,65 @@
+@import "reset";
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  .left {
+    img.profile-image {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+}
+
+main#chat {
+  background: url(../../../images/chat-bg-pattern.webp) center / cover;
+  flex: 1;
+  padding: 10px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+
+  .container {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+  }
+
+  .message {
+    padding: 1rem;
+    color: white;
+    border-radius: 12px;
+    position: relative;
+    max-width: 400px;
+
+    .time {
+      font-size: 0.5em;
+      position: absolute;
+      bottom: 5px;
+      right: 10px;
+    }
+
+    &.to-me {
+      border-bottom-left-radius: 0;
+    }
+
+    &.from-me {
+      align-self: end;
+      border-bottom-right-radius: 0;
+    }
+  }
+}
+
+footer {
+  ::placeholder {
+    color: white !important;
+  }
+}
