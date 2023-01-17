@@ -1,5 +1,9 @@
 import users from "../data/users.js";
 
+const userId = localStorage.getItem("userId");
+
+if (userId) location.replace("./chat-list.html");
+
 const namesSelect = document.querySelector("#names-select");
 const form = document.querySelector("#login-form");
 
