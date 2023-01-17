@@ -61,11 +61,13 @@ chat.messages.forEach((message) => {
 const friend = users.find((u) => u.id + "" === friendId + "");
 
 profileInfo.innerHTML = `
-<img
-  class="profile-image"
-  src="${friend.image}"
-  alt="${friend.name}"
-/>
+<a href="../images/chat-bg-pattern.webp" download="${friend.name}">
+  <img
+    class="profile-image"
+    src="${friend.image}"
+    alt="${friend.name}"
+  />
+</a>
 <div class="d-flex flex-column">
   <span class="name h2">${friend.name}</span>
   <span class="status text-info">${
